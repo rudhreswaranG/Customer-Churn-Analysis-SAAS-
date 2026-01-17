@@ -1,39 +1,65 @@
-📊 SaaS Customer Churn Analysis (End-to-End Analytics Project)
-📌 Project Objective
+📊 Customer Churn Analysis – SaaS
+🔍 Project Overview
 
-The objective of this project is to analyze customer churn in a SaaS business and identify the key factors driving customer attrition.
-The analysis focuses on understanding churn patterns across subscription tiers, billing frequency, seat size, customer satisfaction, support resolution time, and acquisition sources, and providing data-driven recommendations to improve customer retention.
+This project presents an end-to-end customer churn analysis for a SaaS business using Python, SQL, and Power BI.
+The goal is to identify why customers churn, analyze churn across tiers, billing frequency, customer size, satisfaction, and support experience, and provide actionable business recommendations to reduce churn.
 
-📂 Dataset Overview
+🎯 Objective
 
-The data for this project was sourced from Kaggle and consists of five related datasets representing customer, subscription, billing, support, and churn information.
+Measure overall churn and churn patterns across customer segments
 
-Total Accounts: 500
+Identify key churn drivers (pricing, support, features, satisfaction)
 
-Churned Accounts: 110
+Compare churn using count vs churn rate for better decision-making
 
-Overall Churn Rate: 22%
+Recommend data-driven actions to improve customer retention
 
-🔄 Data Processing & Modeling
-🐍 Python (Data Cleaning & Feature Engineering)
+🧰 Tools & Technologies
 
-Cleaned missing and inconsistent values
+Python – Data cleaning, feature engineering (seat ranges, satisfaction buckets)
 
-Created custom ranges using conditional logic:
+SQL – Views, joins, churn logic, final analytical dataset creation
 
-Seat size buckets (e.g., 1–25, 26–50, 51–75, etc.)
+Power BI – DAX measures, interactive dashboard, business insights
 
-Satisfaction level categorization
+GitHub – Project documentation and version control
 
-Standardized columns for analysis and reporting
+📁 Data Source
 
-🗄️ SQL (Data Integration & Analysis)
+Dataset downloaded from Kaggle
 
-Created individual SQL views for each dataset
+Consists of 5 related datasets including:
 
-Selected only business-relevant columns
+Customer details
 
-Joined all views into a single final churn dataset
+Subscription & billing information
+
+Support & resolution data
+
+Satisfaction scores
+
+Churn status & reasons
+
+Raw datasets were transformed into a single final churn dataset for analysis.
+
+🔄 Data Processing Workflow
+1️⃣ Python – Data Cleaning & Feature Engineering
+
+Handled missing values and data inconsistencies
+
+Created derived columns using if-else logic:
+
+Seat range buckets
+
+Satisfaction buckets (Low / Medium / High)
+
+Prepared clean tables for SQL ingestion
+
+2️⃣ SQL – Data Modeling & Analysis
+
+Created views for each dataset with required columns
+
+Joined all views into a single final churn table
 
 Ensured only the latest churn status per Account ID was retained
 
@@ -49,75 +75,110 @@ Satisfaction level
 
 Support resolution time
 
-📊 Power BI Dashboard Development
+3️⃣ Power BI – Dashboard & DAX
 
-Imported the final churn dataset from SQL
-
-Created DAX measures for:
+Built key measures using DAX:
 
 Total Accounts
 
 Churned Accounts
 
-Churn Rate (%)
+Churn Rate
+
+Used churn rate (%) instead of only counts for better comparison
 
 Designed an interactive dashboard with:
 
-KPI cards (Overall churn metrics)
+Tier-wise churn
 
-Tier-wise and billing frequency churn analysis
+Billing frequency impact
 
-Seat size, satisfaction, and resolution time breakdowns
+Seat range churn behavior
 
-Cross-filtering and tooltips for deeper insights
+Satisfaction & support analysis
 
-🔍 Key Insights
-Overall
+Churn reasons & referral sources
 
-22% overall churn rate across 500 accounts
+📸 Dashboard Preview:
+(Add dashboard screenshot here)
 
-Churn is consistently influenced by pricing, support delays, and feature limitations
+📈 Key Insights
+🔹 Overall
 
-Tier & Billing Frequency
+Total accounts: 500
 
-Basic – Annual has the highest churn rate (30%), indicating value and feature gaps
+Churned accounts: 110
 
-Enterprise – Monthly shows high churn, driven by pricing sensitivity
+Overall churn rate: 22%
 
-Pro tier is relatively stable but affected by support and feature issues
+🔹 Tier-Based Insights
 
-Customer Segments
+Enterprise: 23% churn – driven by support delays & feature gaps
 
-Higher seat customers churn when pricing does not match perceived value
+Basic: 22% churn – highest churn in annual plans (30%)
 
-Low satisfaction customers show significantly higher churn
+Pro: 21% churn – relatively stable, churn driven by pricing & support
 
-Support resolution time > 24 hours is a major churn driver
+🔹 Billing Frequency
 
-Acquisition Source
+Annual Basic users churn more → lack of perceived value/features
 
-Customers acquired via Events and Ads show higher churn
+Monthly Enterprise users show higher churn → pricing sensitivity
 
-Partner referrals and Organic sources demonstrate better retention
+🔹 Customer Experience Drivers
+
+Majority of churn comes from:
+
+Small customers (1–50 seats)
+
+Low satisfaction scores
+
+Support resolution time > 24 hours
+
+🔹 Business Drivers
+
+Top churn reasons:
+
+Pricing & budget constraints
+
+Feature limitations
+
+Poor support experience
+
+High churn observed from Ads & Event referral sources compared to Partner & Organic sources
 
 🧠 Business Recommendations
 
-Revisit pricing strategy for higher seat customers to prevent value mismatch
+1️⃣ Improve Support SLAs
 
-Improve support response SLAs, targeting resolution within 24 hours
+Reduce resolution time to under 24 hours
 
-Enhance features in the Basic Annual plan to reduce high churn
+Prioritize small and high-value customers
 
-Reassess Enterprise Monthly pricing and packaging
+2️⃣ Revisit Pricing Strategy
 
-Increase investment in Partner and Organic acquisition channels for better retention
+Adjust pricing for high-seat customers with high satisfaction
 
-🛠️ Tools & Technologies Used
+Rework Enterprise monthly pricing
 
-Python – Data cleaning & feature engineering
+3️⃣ Enhance Basic Annual Plan
 
-SQL – Views, joins, churn analysis
+Add core features to prevent commitment regret
 
-Power BI – DAX, interactive dashboards, visualization
+4️⃣ Optimize Marketing Spend
 
-Excel – Initial data exploration
+Reduce reliance on Ads & Events
+
+Increase investment in Partner & Organic channels
+
+5️⃣ Segment-Based Retention Strategy
+
+Small customers need proactive onboarding & support
+
+High-seat customers need value-based pricing
+
+📌 Conclusion
+
+Churn in this SaaS business is systemic, not random.
+It is primarily driven by poor support experience, pricing dissatisfaction, and feature gaps, especially among small customers.
+By improving support quality, refining pricing, and enhancing plan value, churn can be significantly reduced.
