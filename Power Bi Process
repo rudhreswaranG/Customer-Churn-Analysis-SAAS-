@@ -1,0 +1,38 @@
+Power BI Dashboard Overview
+
+Power BI was used to visualize churn patterns and translate analytical findings into business insights.
+
+Dashboard Objective
+- Identify key churn drivers across customer segments
+- Compare churn behavior by tier and billing frequency
+- Enable interactive analysis using filters and cross-filtering
+
+KPIs Displayed
+- Total Accounts
+- Churned Accounts
+- Churn Rate (%)
+
+Key Visuals Used
+- Tier vs Churn Rate
+- Billing Frequency vs Churn Rate
+- Seat Range vs Churn Rate
+- Satisfaction Level vs Churn Rate
+- Support Resolution Time vs Churn Rate
+- Churn Reason Distribution
+
+Filters & Interactivity
+- Date (Month / Year)
+- Tier
+- Billing Frequency
+- Cross-filtering enabled across all visuals
+
+Analytical Approach
+- Churn Rate used as the primary metric for comparison
+- Counts used only for supporting context (e.g., churn reasons)
+- All visuals are connected to allow drill-down analysis
+
+Outcome
+The dashboard enables stakeholders to:
+- Quickly identify high-risk customer segments
+- Understand churn patterns over time
+- Prioritize retention actions based on experience and support quality
