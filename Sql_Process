@@ -1,0 +1,93 @@
+🗄️ SQL Data Modeling & Churn Analysis
+
+After completing data cleaning and feature engineering in Python, all datasets were uploaded into Microsoft SQL Server for structured data modeling and analysis.
+
+🔹 Data Characteristics
+
+Out of the five datasets used:
+
+Accounts dataset contained unique records (one row per Account ID)
+
+All other datasets contained multiple historical records per Account ID:
+
+Subscriptions: ~5,000 rows
+
+Support Tickets: ~2,000 rows
+
+Churn Events: ~600 rows
+
+Feature Usage: ~25,000 rows
+
+Directly joining these tables would lead to duplicate rows and inflated churn counts, making analysis unreliable.
+
+🔹 SQL Modeling Approach
+
+To ensure accurate churn analysis:
+
+Separate SQL views were created for:
+
+Subscriptions
+
+Support Tickets
+
+Feature Usage
+
+Churn Events
+
+Each view retained only the latest relevant record per Account ID based on date fields (such as end date, churn date, or ticket close date)
+
+This ensured:
+
+One row per account per dataset
+
+Clean joins without duplication
+
+Correct churn attribution
+
+🔹 Final Churn Dataset Creation
+
+A final churn view was created by:
+
+Joining the Accounts table with all latest-record views
+
+Using Account ID as the primary key
+
+Selecting only churn-relevant attributes such as:
+
+Tier & billing frequency
+
+Seat range
+
+Satisfaction score
+
+Support resolution time
+
+Churn reason and feedback
+
+This final dataset contained one row per account and was optimized for Power BI analysis.
+
+🔹 SQL-Based Churn Analysis
+
+In addition to data preparation, churn was also analyzed in SQL across key business segments to identify churn patterns, including:
+
+Tier (Basic, Pro, Enterprise)
+
+Billing frequency (Monthly vs Annual)
+
+Seat range
+
+Satisfaction levels
+
+Support resolution time
+
+These analyses helped validate churn trends before visualization and ensured consistency between SQL results and Power BI insights.
+
+🔹 Outcome
+
+Accurate churn rates without duplication
+
+Reliable segment-level churn analysis
+
+A single, analysis-ready dataset for dashboarding
+
+SQL modeling aligned with real-world BI practices
