@@ -1,34 +1,34 @@
-## Python Data Cleaning & Feature Engineering Summary
+Python Data Cleaning & Feature Engineering Summary
 
-Python was used as the initial data preparation layer before SQL modeling and Power BI visualization.
+Python was used as the initial data preparation layer before SQL modeling and Power BI visualizat
 
-### Objectives
+Objectives
 - Clean raw SaaS datasets
 - Handle missing and inconsistent values
 - Create analysis-ready features for churn investigation
 - Prepare a unified dataset for SQL and dashboard consumption
 
-### Datasets Processed
+Datasets Processed
 - Accounts data
 - Subscriptions data
 - Feature usage data
 - Churn events data
 - Support tickets data
 
-### Key Data Cleaning Steps
+Key Data Cleaning Steps
 - Converted all date columns into proper datetime format
 - Handled missing values in churn feedback, satisfaction scores, and ticket metrics
 - Standardized numeric fields such as seat count and resolution time
 - Ensured churned accounts always had valid reason and feedback categories
 
-### Feature Engineering Performed
-- Created **Seat Range Buckets** to analyze churn by customer size
+Feature Engineering Performed
+- Created Seat Range Buckets to analyze churn by customer size
   - (e.g., 1–25, 26–50, 51–75, 76–100, Above 131)
-- Created **Resolution Time Buckets** to evaluate support impact on churn
+- Created Resolution Time Buckets to evaluate support impact on churn
   - (e.g., 0–4 hrs, 5–8 hrs, 9–12 hrs, 13–24 hrs, Above 48 hrs)
 - Filled missing churn reason codes for churned customers with meaningful categories
 
-### Output
+Output
 - Generated cleaned, structured datasets
 - Data was made ready for:
   - SQL view creation
