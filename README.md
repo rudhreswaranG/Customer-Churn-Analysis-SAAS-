@@ -1,8 +1,6 @@
 📊 Customer Churn Analysis – SaaS
 🔍 Project Overview
-
-This project presents an end-to-end customer churn analysis for a SaaS business using Python, SQL, and Power BI.
-The goal is to identify why customers churn, analyze churn across tiers, billing frequency, customer size, satisfaction, and support experience, and provide actionable business recommendations to reduce churn.
+An end-to-end SaaS churn analysis project where I cleaned data using Python, modeled latest customer-level churn data in SQL, and built an interactive Power BI dashboard to identify churn drivers and provide actionable retention strategies.
 
 🎯 Objective
 
@@ -57,22 +55,19 @@ Prepared clean tables for SQL ingestion
 
 2️⃣ SQL – Data Modeling & Analysis
 
-Created views for each dataset with required columns
+Loaded cleaned Python outputs into Microsoft SQL Server.
 
-Joined all views into a single final churn table
+Since only the Accounts table had unique records and all other tables contained multiple historical entries per Account ID, I:
 
-Ensured only the latest churn status per Account ID was retained
+- Created separate SQL views to retain only the latest record per account (Subscriptions, Support, Features, Churn)
+- Prevented row duplication during joins
+- Built a final churn view with one row per Account ID
 
 Performed churn analysis by:
-
 Tier
-
 Billing frequency
-
 Seat range
-
 Satisfaction level
-
 Support resolution time
 
 3️⃣ Power BI – Dashboard & DAX
@@ -80,9 +75,7 @@ Support resolution time
 Built key measures using DAX:
 
 Total Accounts
-
 Churned Accounts
-
 Churn Rate
 
 Used churn rate (%) instead of only counts for better comparison
