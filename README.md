@@ -94,7 +94,8 @@ Satisfaction & support analysis
 Churn reasons & referral sources
 
 📸 Dashboard Preview:
-(Add dashboard screenshot here)
+![churn_dashboard_page-0001](https://github.com/user-attachments/assets/63f4f341-1d3e-4375-ac69-a8c2d1e350cb)
+
 
 📈 Key Insights
 
