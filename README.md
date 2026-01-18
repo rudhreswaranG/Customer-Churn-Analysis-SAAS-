@@ -97,6 +97,15 @@ Churn reasons & referral sources
 ![churn_dashboard_page-0001](https://github.com/user-attachments/assets/63f4f341-1d3e-4375-ac69-a8c2d1e350cb)
 The dashboard provides a consolidated view of churn across tiers, billing frequency, customer size, satisfaction, and support experience.
 
+▶️ How to Use This Project
+
+Review the dashboard image/PDF to get a high-level understanding of churn patterns
+
+Read the Key Insights section to understand major churn drivers
+
+Use the Business Recommendations as actionable strategies for reducing churn
+
+
 📈 Key Insights
 
 🔹 Overall
