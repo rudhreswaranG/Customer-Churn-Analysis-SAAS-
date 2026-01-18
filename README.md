@@ -97,6 +97,7 @@ Churn reasons & referral sources
 (Add dashboard screenshot here)
 
 📈 Key Insights
+
 🔹 Overall
 
 Total accounts: 500
